@@ -1,0 +1,79 @@
+!!! 5
+html
+
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale = 1.0, user-scalable = no')
+    title=title
+    link(rel='stylesheet', href='css/grid.css', type='text/css', media='screen')
+    link(rel='stylesheet', href='css/style.css', type='text/css', media='screen')
+    link(rel='stylesheet', href='css/normalize.css', type='text/css', media='screen')
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600', rel='stylesheet', type='text/css')
+    script(type='text/javascript', src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+    script(type='text/javascript', src='js/libs/underscore.min.js')
+    script(type='text/javascript', src='js/libs/backbone.min.js')
+    script(type='text/javascript', src='js/core.js')
+    script(type='text/javascript', src='js/js.js')
+    script(type='text/javascript', src='js/jquery.stellar.min.js')
+    script(type='text/javascript', src='js/waypoints.min.js')
+    script(type='text/javascript', src='js/jquery.easing.1.3.js')
+    script(type='text/javascript', src='js/script.js')
+
+  body
+
+    .menu
+      .container.clearfix
+        #logo.grid_3
+          img(src='images/logo.png')
+        #nav.grid_9.omega
+          ul.navigation
+            li(data-slide='1') Vendi
+            li(data-slide='2') Ultime offerte
+            li(data-slide='3') In scadenza
+            li(data-slide='4') Contatti
+
+
+    #slide1.slide(data-slide='1', data-stellar-background-ratio='0.5')
+      .container.clearfix
+        #content.grid_7
+          h1 Vendilo
+          h2 nel modo più facile e veloce!
+          p
+            | Provalo ora! E' totalmente gratuito e in pochi secondi potrai guadagnare vendendo gli oggetti che non ti servono più.
+
+          block insert_sell
+
+        #decorative.grid_5.omega
+          img(src='images/decorative.png')
+
+
+    #slide2.slide(data-slide='2', data-stellar-background-ratio='0.5')
+      .container.clearfix
+        #content.grid_12
+          h1 Ultime offerte
+          h2 Affrettati a contattare il venditore, l'offerta dura 1 mese.
+
+          block show_items
+
+
+    #slide3.slide(data-slide='3', data-stellar-background-ratio='0.5')
+      .container.clearfix
+        #content.grid_12
+          h1 In scadenza
+          h2 Ultimi istanti per concludere il tuo affare.
+
+          block show-latest-list
+
+
+    #slide4.slide(data-slide='4', data-stellar-background-ratio='0.5')
+      .container.clearfix
+        #content.grid_12
+          h1 Contatti
+          h2
+            a(href='http://iselltheworld.herokuapp.com', target='_blank') Vendo il mondo 
+            | è stato creato
+            | da Badlydone.
+          p Non dimenticare di seguirmi!
+          p
+            a(href='https://twitter.com/badlydone', target='_blank')
+              img(src='images/twitter.png')

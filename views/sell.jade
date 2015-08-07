@@ -1,0 +1,28 @@
+extends layout
+
+block insert_sell
+
+	#sellform
+
+		input#new-contact(type="text", placeholder="Contatto (email, telefono)")
+		input#new-desc(type="text", placeholder="Descrizione oggetto")
+		input#new-button(type="submit", value="Vendi")
+
+
+
+block show_items
+
+	#sell-list
+
+
+	script#item-template(type="text/template")
+
+		.sell.grid_5
+			.sell-date
+			.sell-contact
+			.sell-desc
+
+
+block show-latest-list
+
+	#latest-sell-list
